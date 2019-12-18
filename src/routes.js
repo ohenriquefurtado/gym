@@ -1,7 +1,8 @@
 import { Router } from 'express';
+import StudentController from './app/controllers/StudentController';
 
 const router = new Router();
 
-router.get('/', (req, res) => res.json({ message: 'Heello' }));
+router.post('/student', StudentController.create);
 
 export default router;
